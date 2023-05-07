@@ -12,11 +12,10 @@
       html {height: 100%}
       body {height: 100%; margin: 0; background: url(img/background.png); background-size: 100%;}
       #out {height: 100%; display: flex; align-items: center;}
-      #in {border-style: dashed; color: white}
+      #in {border-style: dashed; color: white; background-color: rgb(127,127,127,0.4);}
       h1 {text-align: center;}
       p {text-align: center;}
       .choice-submit {text-align: center;}
-      dialog {color: white border: 1px dashed grey}
     </style>
   </head>
 <body>
@@ -47,17 +46,16 @@
           <label for="78">78</label>
           <br>
           <br>
-          <button type="button" class="btn btn-outline-light" onclick="checkAnswer()">
+          <button type="button" class="btn btn-outline-light" onclick="checka1()">
             完成
           </button>
         </form>
         </div>
-        <dialog id="answerDialog">
-          <p id="answerMessage"></p>
-          <button onclick="closeDialog()">OK</button>
-        </dialog>
-
-
+        <dialog id="answerDialog1">
+          <p id="answerMessage1"></p>
+          <button onclick="closeDialog1()">关闭</button>
+          <button onclick="to_q2()">下一题</button>
+        </dialog>、
 
 </div>
 </div>
