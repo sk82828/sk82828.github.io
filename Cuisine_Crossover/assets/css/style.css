@@ -669,14 +669,14 @@ section {
   font-family: "Poppins", sans-serif;
 }
 
-.section-title h2::after {
+/* .section-title h2::after {
   content: "";
   width: 120px;
   height: 1px;
   display: inline-block;
   background: rgba(255, 255, 255, 0.2);
   margin: 4px 10px;
-}
+} */
 
 .section-title p {
   margin: 0;
@@ -827,17 +827,21 @@ section {
 }
 
 .about .content ul li {
-  padding-bottom: 10px;
+  padding-bottom: 5px;
 }
 
 .about .content ul i {
-  font-size: 20px;
+  font-size: 15px;
   padding-right: 4px;
   color: #cda45e;
 }
 
 .about .content p:last-child {
   margin-bottom: 0;
+}
+
+.about .content p{
+  font-size: 15px
 }
 
 @media (min-width: 1024px) {
