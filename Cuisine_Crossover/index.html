@@ -40,6 +40,10 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BY0SVMFS5K"></script>
   <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-BY0SVMFS5K'); </script>
 
+  <!-- Visualization -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.0.0/d3.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.20/c3.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.20/c3.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -76,6 +80,7 @@
           <li><a class="nav-link scrollto" href="#about">网站简介</a></li>
           <li><a class="nav-link scrollto" href="#menu">食界地图</a></li>
           <li><a class="nav-link scrollto" href="#events">餐厅推荐</a></li>
+          <li><a class="nav-link scrollto" href="#testimonials">数据之窗</a></li>
           <li class="dropdown"><a href="#"><span>看看特色菜</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="Italy.html">意大利</a></li>
@@ -262,6 +267,63 @@
 
       </div>
     </section><!-- End Events Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>数据之窗</h2>
+          <p>CNN2023世界美食排行榜</p>
+        </div>
+        <div id="chart" class='bg-light'></div>
+            <script>
+          var chart = c3.generate({
+           data: {
+             columns: [
+             // ['意大利', 1],
+             // ['中国', 2],
+             // ['法国', 3],
+             // ['西班牙', 4],
+             // ['日本', 5],
+             // ['印度', 6],
+             // ['希腊', 7],
+             // ['泰国', 8],
+             // ['墨西哥', 9],
+             // ['美国', 10]
+             ['x', '意大利', '中国', '法国', '西班牙', '日本', '印度', '希腊', '泰国', '墨西哥', '美国'],
+             ['排名', 1, 2, 3, 4, 5, 6, 7 ,8, 9, 10]
+             // ['权重',10,9,8,7,6,5,4,3,2,1]
+            ],
+            x : 'x',
+            type : 'bar',
+            labels:true,
+            colors:{
+              排名:'#cda45e',
+              axis:'#cda45e'
+            }
+            },
+
+            axis:{
+              rotated:true,
+              x:{
+                type: 'category',
+                // label:'国家'
+              },
+              y:{
+                label:'排名'
+              }
+            },
+
+            legend:{
+              show:false
+            }
+
+            });
+        </script>
+
+      </div>
+    </section><!-- End Testimonials Section -->
 
     <!-- ======= Book A Table Section ======= -->
     <section id="book-a-table" class="book-a-table">
